@@ -67,9 +67,9 @@ The name input accepts `*` as a zero-or-more-character wildcard. The exact name 
 
 Examples:
 
-- `auto`, length 6: generated characters may appear before or after `auto`.
-- `au*to`, length 6: generated characters may appear before `au`, between `au` and `to`, and after `to`.
-- `au*to*co*m`: remaining characters are distributed across the beginning, every `*` gap, and the end.
+- `domain`, length 6: generated characters may appear before or after `domain`.
+- `do*main`, length 6: generated characters may appear before `do`, between `do` and `main`, and after `main`.
+- `do*ma*in.com`: remaining characters are distributed across the beginning, every `*` gap, and the end.
 - `*`, length 3: generates every 3-character combination, subject to the safety limit.
 
 By default generated characters are `a-z`. Enable **Include numbers 0-9** to use `a-z0-9` for generated positions. Fixed pattern characters remain letters.

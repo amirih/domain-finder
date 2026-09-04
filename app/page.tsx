@@ -441,9 +441,24 @@ export default function HomePage() {
               autoComplete="off"
             />
             <small>
-              * matches zero or more generated characters. Example: au*to or
-              au*to*co*m.
+              * matches zero or more generated characters. Example: do*main or
+              do*ma*in.com.
             </small>
+              <div className="character-option">
+              <InputSwitch
+                inputId="include-numbers"
+                checked={includeNumbers}
+                onChange={(event) => setIncludeNumbers(Boolean(event.value))}
+              />
+              <label htmlFor="include-numbers">
+                <strong>Include numbers 0-9</strong>
+                <small>
+                  {includeNumbers
+                    ? "Wildcards and free positions use a-z and 0-9."
+                    : "Wildcards and free positions use a-z only."}
+                </small>
+              </label>
+            </div>
           </label>
 
           <label className="field-block">
@@ -462,21 +477,7 @@ export default function HomePage() {
               The extension is not included in this length. * does not count as
               a fixed character.
             </small>
-            <div className="character-option">
-              <InputSwitch
-                inputId="include-numbers"
-                checked={includeNumbers}
-                onChange={(event) => setIncludeNumbers(Boolean(event.value))}
-              />
-              <label htmlFor="include-numbers">
-                <strong>Include numbers 0-9</strong>
-                <small>
-                  {includeNumbers
-                    ? "Wildcards and free positions use a-z and 0-9."
-                    : "Wildcards and free positions use a-z only."}
-                </small>
-              </label>
-            </div>
+          
           </label>
 
           <label className="field-block">
