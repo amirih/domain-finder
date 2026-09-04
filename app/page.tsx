@@ -627,7 +627,7 @@ export default function HomePage() {
             stripedRows
             size="small"
             scrollable
-            scrollHeight="640px"
+            scrollHeight="6400px"
             className="domain-table"
           >
             <Column selectionMode="multiple" headerStyle={{ width: "3rem" }} />
