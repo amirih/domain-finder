@@ -440,6 +440,12 @@ export default function HomePage() {
             <InputText
               value={rawInput}
               onChange={(event) => onInputChange(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  event.preventDefault();
+                  generateAndCheck();
+                }
+              }}
               placeholder="domain, do*main, or do*ma*in.com"
               autoComplete="off"
             />
@@ -488,6 +494,12 @@ export default function HomePage() {
             <InputText
               value={extensionInput}
               onChange={(event) => onExtensionChange(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  event.preventDefault();
+                  generateAndCheck();
+                }
+              }}
               placeholder=".com, .org, .net"
             />
             <div className="extension-tags">
