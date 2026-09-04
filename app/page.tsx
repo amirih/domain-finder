@@ -676,17 +676,17 @@ export default function HomePage() {
             sell the domain; names can still be reserved, blocked,
             premium-priced, or otherwise unavailable for purchase.
           </p>
+        </section>
 
-           
-           <p className="footer">
+        
+      )}
+      <section className="footer">
             &copy; {new Date().getFullYear()} Hossein Amiri
             <br />
             GitHub: <a href="https://github.com/onapplications/domain-finder" target="_blank" rel="noopener noreferrer">
               https://github.com/onapplications/domain-finder
             </a>
-          </p>
-        </section>
-      )}
+      </section>
     </main>
   );
 }
