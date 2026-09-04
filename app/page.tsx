@@ -164,6 +164,7 @@ export default function HomePage() {
     : 0;
 
   function onInputChange(value: string) {
+    stopChecking();
     const previousParsed = parseSeedAndExtension(rawInput);
     const parsed = parseSeedAndExtension(value);
     setRawInput(value);
@@ -178,6 +179,8 @@ export default function HomePage() {
     const parsedRequiredLength = patternLiteralLength(parsed.seed);
     if (parsed.seed && length < Math.max(parsedRequiredLength, 1))
       setLength(Math.max(parsedRequiredLength, 1));
+    
+  
   }
 
   function onExtensionChange(value: string) {
